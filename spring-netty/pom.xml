@@ -10,7 +10,7 @@
 	</parent>
 	<artifactId>spring-netty</artifactId>
 	<name>spring-netty</name>
-	<url>http://maven.apache.org</url>
+	<url>http://nerdronix.blogspot.com/2013/06/netty-4-configuration-using-spring-maven.html</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>

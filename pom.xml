@@ -109,4 +109,7 @@
 			</plugin>
 		</plugins>
 	</build>
+	<url>https://github.com/menacher/nerdronix</url>
+	<description>Parent project pom for all source code published at the http://nerdronix.blogspot.com/ website</description>
+	<name>Nerdronix</name>
 </project>
