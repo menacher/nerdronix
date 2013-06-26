@@ -1,7 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>nerdronix</artifactId>
+	<groupId>org.nerdronix</groupId>
+	<artifactId>blog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
@@ -17,10 +18,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:git://github.com/menacher/nerdronix.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/menacher/nerdronix.git</developerConnection>
-		<url>https://github.com/menacher/nerdronix.git</url>
-		<tag>HEAD</tag>
+		<connection>scm:git:git@github.com:menacher/nerdronix.git</connection>
+		<developerConnection>scm:git:git@github.com:menacher/nerdronix.git</developerConnection>
+		<url>git@github.com:menacher/nerdronix.git</url>
 	</scm>
 
 	<developers>
@@ -112,5 +112,4 @@
 	<url>https://github.com/menacher/nerdronix</url>
 	<description>Parent project pom for all source code published at the http://nerdronix.blogspot.com/ website</description>
 	<name>Nerdronix</name>
-	<groupId>com.github.menacher</groupId>
 </project>
