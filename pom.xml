@@ -9,6 +9,12 @@
 		<module>spring-netty</module>
 	</modules>
 
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
 	<licenses>
 		<license>
 			<name>GNU Lesser General Public License (LGPL), Version 2.1</name>
