@@ -6,6 +6,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>spring-netty</module>
+		<module>storm-chronicle</module>
 	</modules>
 
 	<parent>
