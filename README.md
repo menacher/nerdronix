@@ -5,6 +5,15 @@ Source code for http://nerdronix.blogspot.com/ blog is committed in this repo.
 
 Installation
 ============
+Maven
+-----
+```xml
+<dependency>
+    <groupId>com.github.menacher</groupId>
+    <artifactId>nerdronix</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
 
 With Maven and using Eclipse
 ----------------------------
