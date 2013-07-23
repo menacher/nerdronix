@@ -42,7 +42,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<org.springframework.version>3.2.2.RELEASE</org.springframework.version>
-		<netty.version>4.0.0.CR6</netty.version>
+		<netty.version>4.0.4.Final</netty.version>
 	</properties>
 
 	<dependencyManagement>

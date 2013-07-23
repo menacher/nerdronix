@@ -2,21 +2,23 @@ package org.nerdronix.springnetty.handlers;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.channel.ChannelHandler.Sharable;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 @Qualifier("serverHandler")
+@Sharable
 public class ServerHandler extends SimpleChannelInboundHandler<String> {
 
 	@Override
-	public void messageReceived(ChannelHandlerContext ctx, String msg)
+	public void channelRead0(ChannelHandlerContext ctx, String msg)
 			throws Exception {
 		System.out.print(msg);
-		ctx.channel().write(msg);
+		ctx.channel().writeAndFlush(msg);
 	}
-
+	
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		System.out.println("Channel is active\n");
@@ -28,4 +30,5 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
 		System.out.println("\nChannel is disconnected");
 		super.channelInactive(ctx);
 	}
+
 }
