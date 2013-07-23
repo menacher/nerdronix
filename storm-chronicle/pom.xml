@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>com.github.menacher</groupId>
 		<artifactId>nerdronix</artifactId>
-		<version>0.0.2</version>
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 	<artifactId>storm-chronicle</artifactId>
 	<description>An example project which uses Java Chronicle as a Spout for Storm.</description>
