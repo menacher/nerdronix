@@ -1,0 +1,40 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC1")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'spring-boot'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName = 'org.nerdronix.springbootvertx.GreetingApplication'
+
+jar {
+    baseName = 'spring-boot-vertx'
+    version =  '0.0.3-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.10'
+    compile("org.springframework.boot:spring-boot-starter-web:1.2.2.RELEASE")
+    compile("org.thymeleaf:thymeleaf-spring4:2.1.2.RELEASE")
+    compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.2.1")
+	compile("io.vertx:lang-groovy:2.1.1-final"){
+		exclude group: 'org.codehaus.groovy', module: 'groovy-all'
+	}
+	compile("io.vertx:vertx-platform:2.1.5")
+	compile("io.vertx:vertx-hazelcast:2.1.5")
+}
