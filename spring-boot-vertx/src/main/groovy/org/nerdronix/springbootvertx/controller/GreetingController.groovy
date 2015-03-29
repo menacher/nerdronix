@@ -30,6 +30,9 @@ public class GreetingController {
 	@Autowired
 	HttpClient client
 	
+	@Autowired
+	EventBus eventBus;
+	
 	/**
 	 * Greeting which is specific to spring boot. No vertx
 	 * @param name reflected back to user using the thymeleaf template in resources folder.
@@ -56,6 +59,8 @@ public class GreetingController {
 		client.getNow("/posts/${id}") { resp ->
 			println "Got response ${resp.statusCode}"
 			resp.bodyHandler { body ->
+				// Publish messages via event bus
+				eventBus.publish("hello.listeners", body.toString())
 				HttpHeaders headers = new HttpHeaders()
 				headers.set("Content-Type", MediaType.APPLICATION_JSON_VALUE)
 				ResponseEntity<String> responseEntity = new ResponseEntity<>(body.toString(), headers, HttpStatus.CREATED)
