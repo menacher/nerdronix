@@ -1,7 +1,7 @@
 package org.nerdronix.springnetty.server;
 
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.Channel;
+import io.netty.channel.ChannelFuture;
 
 import java.net.InetSocketAddress;
 
@@ -23,18 +23,17 @@ public class TCPServer {
 	@Qualifier("tcpSocketAddress")
 	private InetSocketAddress tcpPort;
 
-	private Channel serverChannel;
+	private ChannelFuture serverChannelFuture;
 
 	@PostConstruct
 	public void start() throws Exception {
 		System.out.println("Starting server at " + tcpPort);
-		serverChannel = b.bind(tcpPort).sync().channel().closeFuture().sync()
-				.channel();
+		serverChannelFuture = b.bind(tcpPort).sync();
 	}
 
 	@PreDestroy
-	public void stop() {
-		serverChannel.close();
+	public void stop() throws Exception {
+	    serverChannelFuture.channel().closeFuture().sync();
 	}
 
 	public ServerBootstrap getB() {
