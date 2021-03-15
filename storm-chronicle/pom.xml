@@ -30,6 +30,64 @@
 			<groupId>storm</groupId>
 			<artifactId>storm</artifactId>
 			<version>0.7.2</version>
+			<exclusions>
+				<exclusion>
+				    <groupId>org.clojure</groupId>
+				    <artifactId>tools.cli</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>org.clojure</groupId>
+				    <artifactId>tools.logging</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>org.clojure</groupId>
+				    <artifactId>math.numeric-tower</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>hiccup</groupId>
+				    <artifactId>hiccup</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>ring</groupId>
+				    <artifactId>ring-servlet</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>org.clojure</groupId>
+				    <artifactId>core.incubator</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>org.clojure</groupId>
+				    <artifactId>tools.macro</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>clout</groupId>
+				    <artifactId>clout</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>javax.servlet</groupId>
+				    <artifactId>servlet-api</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>org.mortbay.jetty</groupId>
+				    <artifactId>servlet-api</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>ring</groupId>
+				    <artifactId>ring-core</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>compojure</groupId>
+				    <artifactId>compojure</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>clj-time</groupId>
+				    <artifactId>clj-time</artifactId>
+				</exclusion>
+				<exclusion>
+				    <groupId>ring</groupId>
+				    <artifactId>ring-jetty-adapter</artifactId>
+				</exclusion>
+            		</exclusions>
 		</dependency>
 	</dependencies>
 </project>
